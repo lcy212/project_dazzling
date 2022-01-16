@@ -1,21 +1,28 @@
 // headBox.scss
 
-#headBox { width: 100%; height: 160px; padding-top: 90px;  }
+#headBox { width: 100%; height: 220px; padding-top: 90px; }
 
-.head_inner { width: 940px; height: 58px; margin: auto; 
-  h1 { float: left; width: 220px; height: 45px; font-size: 42px;  }
-  .gnb { float:right; width: 540px; height: 50px; margin-top: 8px; 
+.head_inner { width: 940px; height: 56px; margin: auto; 
+  h1 { float: left; width: 220px; height: 40px; font-size: 36px; }
+  .gnb { float:right; width: 540px; height: 50px; margin-top: 6px; 
     ul { width: 100%; height: 100%; }
     li { 
       position:relative;
       float: left; width: 135px; height: 100%; 
-      line-height: 50px; text-align: center; font-size: 24px;
-      &:after, &::after {
+      line-height: 50px; text-align: center; font-size: 18px;
+      &:before, &::before {
         content:""; display:block;
         position:absolute; top: 0; bottom:0; right: 0; margin: auto;
-        width: 0; height: 18px; border-right:1px solid #7b7b7b;
+        width: 0; height: 10px; border-right:1px solid #7b7b7b;
       }
-      &:last-child::after, &:last-child::after { display: none; } 
+      &:last-child::before, &:last-child::before { display: none; } 
+      &:hover { font-weight: bold; }
+      &:hover:after, &:hover::after {
+        content:""; display: block;
+        position:absolute; bottom: 4px; left: 0; right: 0;
+        width: 90px; height: 0; margin: auto;
+        border-bottom: 5px solid rgb(239, 176, 151); border-radius: 100px;
+      }
     }
     a { display: block; width: 100%; height: 100%; }
   }

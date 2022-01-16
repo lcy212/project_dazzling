@@ -2,6 +2,7 @@ import React from 'react';
 import HeadBox from './component/HeadBox';
 import RouterPage from './Router/RouterPage';
 import FootBox from './component/FootBox';
+import UpBox from './component/UpBox';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <HeadBox />
       <RouterPage />
       <FootBox />
+      <UpBox />
     </div>
   );
 }
