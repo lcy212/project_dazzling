@@ -1,0 +1,15 @@
+// Staffbox.scss
+
+#staffBox { width: 100%; height: 1200px; }
+
+.staff_inner { position:relative; width: 1190px; height: 1038px; margin: auto; }
+.staff_part_1 { 
+  width: 710px; height: 480px; 
+  background-image: url('../../../public/img/introduce_3.png');
+  background-repeat: no-repeat;
+}
+.staff_part_2 { 
+  position:absolute; right: 0; bottom: 0;
+  width: 750px; height: 520px; 
+  background-image: url('../../../public/img/introduce_4.png');
+}

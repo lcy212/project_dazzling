@@ -1,6 +1,6 @@
 // viewBox.scss
 
-#viewBox { position:relative; width: 100%; height: 450px; }
+#viewBox { position:relative; width: 100%; height: 550px; }
 
 .btn_area { 
   position:absolute; top: 50%; left: 0; right: 0; z-index: 10; 
@@ -23,8 +23,8 @@
     text-align: center; line-height: 450px;
 
     &.on { opacity: 1; }
-    &:nth-child(1) { background-image:url('../../../public/img/view_bg_1.png'); }
-    &:nth-child(2) { background-image:url('../../../public/img/view_bg_2.png'); }
-    &:nth-child(3) { background-image:url('../../../public/img/view_bg_3.png'); }
+    &:nth-child(1) { background-image:url('../../../public/img/view_bg_1.png'); background-size: initial; }
+    &:nth-child(2) { background-image:url('../../../public/img/view_bg_2.png'); background-size: initial; }
+    &:nth-child(3) { background-image:url('../../../public/img/view_bg_3.png'); background-size: initial; }
   }
 }
