@@ -1,8 +1,8 @@
 import React from 'react';
-import HeadBox from './component/HeadBox';
+import HeadBox from './page/Base/HeadBox';
 import RouterPage from './Router/RouterPage';
-import FootBox from './component/FootBox';
-import UpBox from './component/UpBox';
+import FootBox from './page/Base/FootBox';
+import UpBox from './page/Base/UpBox';
 import './App.css';
 
 function App() {

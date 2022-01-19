@@ -1,4 +1,4 @@
-import '../style/company/IntroduceBox.scss';
+import '../../style/company/IntroduceBox.scss';
 
 export default function IntroduceBox(){
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import ViewBox from '../component/ViewBox';
-import NewBox from '../component/NewBox';
-import BestBox from '../component/BestBox';
-import InstaBox from '../component/InstaBox';
+import ViewBox from './Main/ViewBox';
+import NewBox from './Main/NewBox';
+import BestBox from './Main/BestBox';
+import InstaBox from './Main/InstaBox';
 
 export default function Main(){
   return (

@@ -2,8 +2,24 @@ import React from 'react';
 import '../style/product/ProductBox.scss';
 
 export default function Product(){
+
+  const productData = [
+    { id:"12", title:"제품명_12", keyword:"#키워드 #키워드" },
+    { id:"11", title:"제품명_11", keyword:"#키워드 #키워드" },
+    { id:"10", title:"제품명_10", keyword:"#키워드 #키워드" },
+    { id:"9", title:"제품명_9", keyword:"#키워드 #키워드" },
+    { id:"8", title:"제품명_8", keyword:"#키워드 #키워드" },
+    { id:"7", title:"제품명_7", keyword:"#키워드 #키워드" },
+    { id:"6", title:"제품명_6", keyword:"#키워드 #키워드" },
+    { id:"5", title:"제품명_5", keyword:"#키워드 #키워드" },
+    { id:"4", title:"제품명_4", keyword:"#키워드 #키워드" },
+    { id:"3", title:"제품명_3", keyword:"#키워드 #키워드" },
+    { id:"2", title:"제품명_2", keyword:"#키워드 #키워드" },
+    { id:"1", title:"제품명_1", keyword:"#키워드 #키워드" },
+  ]
+
   return (
-    <div id="productBox">
+    <article id="productBox">
       <div className="product_inner">
 
         <div className="title_area">
@@ -15,117 +31,25 @@ export default function Product(){
         <div className="product_area">
           <p>총 00개의 제품이 있습니다.</p>
           <ul>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_1</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_2</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_3</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_4</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_5</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_6</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_7</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_8</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_9</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_10</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_11</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className="img_part"><span className="blind">상품이름_12</span></div>
-                <dl>
-                  <dt>상품명</dt>
-                  <dd>#키워드 #키워드</dd>
-                </dl>
-              </a>
-            </li>
+            {
+              productData.map((data) => {
+                return (
+                  <li key={data.id}>
+                    <a href="#">
+                      <div className="img_part"><span className="blind">{data.title}</span></div>
+                      <dl>
+                        <dt>{data.title}</dt>
+                        <dd>{data.keyword}</dd>
+                      </dl>
+                    </a>
+                  </li>
+                )
+              })
+            }
           </ul>
         </div>
+
       </div>
-    </div>
+    </article>
   )
 }

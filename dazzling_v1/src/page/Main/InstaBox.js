@@ -1,4 +1,4 @@
-import '../style/main/InstaBox.scss';
+import '../../style/main/InstaBox.scss';
 
 export default function InstaBox(){
   return (

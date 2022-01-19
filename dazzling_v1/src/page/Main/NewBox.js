@@ -1,10 +1,10 @@
-import '../style/main/BestBox.scss';
+import '../../style/main/NewBox.scss';
 
-export default function BestBox(){
+export default function NewBox(){
   return (
-    <article id="bestBox">
-      <div className="best_inner">
-        <h2>인기상품</h2>
+    <article id="newBox">
+      <div className="new_inner">
+        <h2>신상품</h2>
         <div className="product_area">
           <ul>
             <li>

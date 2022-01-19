@@ -1,6 +1,6 @@
 import React from 'react';
-import IntroduceBox from '../component/IntroduceBox';
-import StaffBox from '../component/StaffBox';
+import IntroduceBox from './Company/IntroduceBox';
+import StaffBox from './Company/StaffBox';
 
 export default function Company(){
   return (

@@ -1,4 +1,4 @@
-import '../style/company/Staffbox.scss';
+import '../../style/company/Staffbox.scss';
 
 export default function StaffBox(){
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style/main/ViewBox.scss';
+import '../../style/main/ViewBox.scss';
 
 export default function ViewBox(){
 
