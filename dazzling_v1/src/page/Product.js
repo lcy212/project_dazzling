@@ -1,22 +1,20 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import '../style/product/ProductBox.scss';
 
 export default function Product(){
 
-  const productData = [
-    { id:"12", title:"제품명_12", keyword:"#키워드 #키워드" },
-    { id:"11", title:"제품명_11", keyword:"#키워드 #키워드" },
-    { id:"10", title:"제품명_10", keyword:"#키워드 #키워드" },
-    { id:"9", title:"제품명_9", keyword:"#키워드 #키워드" },
-    { id:"8", title:"제품명_8", keyword:"#키워드 #키워드" },
-    { id:"7", title:"제품명_7", keyword:"#키워드 #키워드" },
-    { id:"6", title:"제품명_6", keyword:"#키워드 #키워드" },
-    { id:"5", title:"제품명_5", keyword:"#키워드 #키워드" },
-    { id:"4", title:"제품명_4", keyword:"#키워드 #키워드" },
-    { id:"3", title:"제품명_3", keyword:"#키워드 #키워드" },
-    { id:"2", title:"제품명_2", keyword:"#키워드 #키워드" },
-    { id:"1", title:"제품명_1", keyword:"#키워드 #키워드" },
-  ]
+  const productData = './data/productData.json';
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const rel = await axios.get(productData);
+      setProductList(rel.data);
+    })()
+  }, [])
+
+  const filterData = productList.filter((product, idx) => idx < 13);
 
   return (
     <article id="productBox">
@@ -32,20 +30,26 @@ export default function Product(){
           <p>총 00개의 제품이 있습니다.</p>
           <ul>
             {
-              productData.map((data) => {
-                return (
-                  <li key={data.id}>
-                    <a href="#">
-                      <div className="img_part"><span className="blind">{data.title}</span></div>
-                      <dl>
-                        <dt>{data.title}</dt>
-                        <dd>{data.keyword}</dd>
-                      </dl>
-                    </a>
-                  </li>
-                )
-              })
+              filterData.map((product, idx) => 
+                <li key={idx}>
+                  <a href="#">
+                    <div className="img_part"><span className="blind">{product.title}</span></div>
+                    <dl>
+                      <dt>{product.title}</dt>
+                      <dd>{product.keyword}</dd>
+                    </dl>
+                  </a>
+                </li>
+              )
             }
+          </ul>
+        </div>
+
+        <div className="page_area">
+          <ul>
+            <li><a href="#">&lt;&lt;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">&gt;&gt;</a></li>
           </ul>
         </div>
 

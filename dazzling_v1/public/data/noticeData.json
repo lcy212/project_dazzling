@@ -1,0 +1,7 @@
+[
+  { "id":"5", "titleId":"notice_5", "title":"제목을 입력하세요.", "date":"2022년 00월 00일", "category":"공지사항" },
+  { "id":"4", "titleId":"notice_4", "title":"제목을 입력하세요.", "date":"2022년 00월 00일 ~ 2022년 00월 00일", "category":"이벤트" },
+  { "id":"3", "titleId":"notice_3", "title":"제목을 입력하세요.", "date":"2022년 00월 00일 ~ 2022년 00월 00일", "category":"이벤트" },
+  { "id":"2", "titleId":"notice_2", "title":"제목을 입력하세요.", "date":"2022년 00월 00일", "category":"공지사항" },
+  { "id":"1", "titleId":"notice_1", "title":"제목을 입력하세요.", "date":"2022년 00월 00일", "category":"공지사항" }
+]

@@ -4,6 +4,7 @@ import Main from '../page/Main';
 import Company from '../page/Company';
 import Product from '../page/Product';
 import Notice from '../page/Notice';
+import NoticeDetail from '../page/Notice/NoticeDetail';
 import PageError from '../page/PageError';
 
 export default function RouterPage(){
@@ -14,7 +15,9 @@ export default function RouterPage(){
       <Route path="/Main" element={<Main />} />
       <Route path="/Company" element={<Company />} />
       <Route path="/Product" element={<Product />} />
-      <Route path="/Notice" element={<Notice />} />
+      <Route path="/Notice" element={<Notice />}>
+        <Route path=":linkTo" element={<NoticeDetail />} />
+      </Route>
       <Route path="/*" element={<PageError />} />
     </Routes>
   )
