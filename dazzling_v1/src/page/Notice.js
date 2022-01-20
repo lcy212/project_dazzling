@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate, Outlet } from 'react-router-dom';
+// import { useParams, Link, useNavigate, Outlet } from 'react-router-dom';
 import axios from 'axios';
 import '../style/notice/NoticeBox.scss';
 
@@ -7,8 +7,8 @@ export default function Notice(){
 
   const noticeData = './data/noticeData.json';
   const [noticeList, setNoticeList] = useState([]);
-  const nav = useNavigate(); // link의 to같은 기능
-  const {linkTo} = useParams(); // 인식하는 기능
+  // const nav = useNavigate(); // link의 to같은 기능
+  // const {linkTo} = useParams(); // 인식하는 기능
 
   useEffect(() => {
     (async () => {
@@ -17,9 +17,9 @@ export default function Notice(){
     })()
   }, []);
 
-  useEffect(() => {
-    console.log(linkTo)
-  }, [linkTo])
+  // useEffect(() => {
+  //   console.log(linkTo)
+  // }, [linkTo])
 
   const filterData = noticeList.filter((notice, idx) => idx < 6);
 
@@ -39,18 +39,18 @@ export default function Notice(){
               <li key={idx}>
                 <div className="num_part">{notice.id}</div>
                 <div className="title_part">
-                  {/* <a href="#" onClick={() => {nav(notice.title)}}>
+                  <a href="#">
                     <dl>
                       <dt>{notice.title}</dt>
                       <dd>{notice.date}</dd>
                     </dl>
-                  </a> */}
-                  <button type="button" onClick={() => {nav(notice.titleId)}}>
+                  </a>
+                  {/* <button type="button" onClick={() => {nav(notice.titleId)}}>
                     <dl>
                       <dt>{notice.title}</dt>
                       <dd>{notice.date}</dd>
                     </dl>
-                  </button>
+                  </button> */}
                 </div>
                 <div className="category_part">
                   <p>{notice.category}</p>
@@ -58,7 +58,7 @@ export default function Notice(){
               </li>
             )}
           </ul>
-          <Outlet />
+          {/* <Outlet /> */}
         </div>
         
         <div className="page_area">
